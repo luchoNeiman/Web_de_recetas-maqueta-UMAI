@@ -21,24 +21,37 @@
 
 <body>
     <header class="header-main">
-        <nav class="container d-flex flex-wrap justify-content-between align-items-center py-3" aria-label="Navegación principal">
-            <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <nav class="container navbar-recetas" aria-label="Navegación principal">
+            <a href="#" class="brand-recetas">
                 <img src="assets/img/logo.png" alt="Logo Web de Recetas" class="logo-header">
-                <span class="fs-4 fw-bold">Web de Recetas</span>
+                <span class="brand-copy">
+                    <span class="brand-title">Web de Recetas</span>
+                    <span class="brand-subtitle">Sabores caseros de todo el mundo</span>
+                </span>
             </a>
-            <ul class="nav nav-pills gap-2 mb-0">
-                <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Inicio</a></li>
-                <li class="nav-item"><a href="#recetas" class="nav-link">Recetas</a></li>
-                <li class="nav-item"><a href="#categorias" class="nav-link">Categorías</a></li>
-                <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+            <ul class="menu-recetas">
+                <li><a href="#" class="menu-link menu-link--active" aria-current="page">Inicio</a></li>
+                <li><a href="#categorias" class="menu-link">Categorías</a></li>
+                <li><a href="#recetas" class="menu-link">Recetas</a></li>
+                <li><a href="#contacto" class="menu-link">Contacto</a></li>
+                <li><a href="#categorias" class="menu-cta">Receta del día</a></li>
             </ul>
         </nav>
-        <section class="hero-section text-center text-white d-flex align-items-center justify-content-center">
-            <div class="hero-content">
-                <h1 class="display-4 fw-bold mb-3">Descubre recetas deliciosas para cada ocasión</h1>
-                <p class="lead mb-4">Inspiración diaria, ingredientes simples y resultados sorprendentes. ¡Explora, cocina y comparte!</p>
-                <a href="#recetas" class="btn btn-lg btn-primary shadow">Ver recetas</a>
-            </div>
+        <section class="hero-section" aria-label="Presentación principal">
+            <article class="hero-content container">
+                <p class="hero-kicker">Especial de la semana</p>
+                <h1>Cocina rico sin complicarte la vida</h1>
+                <p class="hero-description">Recetas claras, ingredientes cotidianos y combinaciones con identidad para que cocinar sea más simple y más lindo.</p>
+                <ul class="hero-tags" role="list">
+                    <li>Rápidas</li>
+                    <li>Caseras</li>
+                    <li>Con estilo</li>
+                </ul>
+                <p class="hero-actions">
+                    <a href="#recetas" class="hero-btn hero-btn--primary">Ver recetas</a>
+                    <a href="#categorias" class="hero-btn hero-btn--ghost">Explorar categorías</a>
+                </p>
+            </article>
         </section>
     </header>
 

@@ -45,31 +45,192 @@ select {
 
 /* HEADER */
 .header-main {
-    background: #fff;
+    background: linear-gradient(180deg, #fff8ef 0%, #ffffff 100%);
     box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.04);
     margin-bottom: 1.5rem;
 }
 
+.navbar-recetas {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-block: 1rem;
+}
+
+.brand-recetas {
+    align-items: center;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.brand-copy {
+    display: grid;
+    gap: 0.1rem;
+}
+
+.brand-title {
+    color: #7c2d12;
+    font-size: 1.45rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.brand-subtitle {
+    color: #575757;
+    font-size: 0.85rem;
+}
+
 .logo-header {
-    height: 5rem;
+    border-radius: 0.75rem;
+    height: 3.4rem;
     width: auto;
-    margin-right: 0.75rem;
+}
+
+.menu-recetas {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-link {
+    border-radius: 999rem;
+    color: #2b2b2b;
+    font-weight: 600;
+    padding: 0.45rem 0.9rem;
+    transition: background-color 150ms ease, color 150ms ease;
+}
+
+.menu-link:hover,
+.menu-link:focus-visible,
+.menu-link--active {
+    background: #fdebd6;
+    color: #9a3412;
+}
+
+.menu-cta {
+    background: #0f766e;
+    border-radius: 999rem;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 0.45rem 1rem;
+    transition: background-color 150ms ease;
+}
+
+.menu-cta:hover,
+.menu-cta:focus-visible {
+    background: #0c615b;
 }
 
 /* HERO */
 .hero-section {
-    min-height: 22rem;
+    align-items: center;
+    display: flex;
+    min-height: 40rem;
     background-image: url('../img/banner.jpeg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 1.25rem 0;
+    position: relative;
+}
+
+.hero-section::before {
+    background: linear-gradient(90deg, rgba(24, 24, 24, 0.66) 0%, rgba(24, 24, 24, 0.28) 55%, rgba(24, 24, 24, 0.1) 100%);
+    content: "";
+    inset: 0;
+    position: absolute;
 }
 
 .hero-content {
-    padding: 3rem 1rem;
-    background: rgba(0, 0, 0, 0.45);
-    border-radius: 1rem;
-    max-width: 44rem;
-    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border: 0.0625rem solid rgba(124, 45, 18, 0.16);
+    border-radius: 1.2rem;
+    color: #222;
+    margin-inline: 0;
+    max-width: 36rem;
+    padding: 1.6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-kicker {
+    color: #9a3412;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    line-height: 1.08;
+    margin-bottom: 0.8rem;
+}
+
+.hero-description {
+    color: #494949;
+    font-size: 1.02rem;
+    margin-bottom: 1rem;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    list-style: none;
+    margin: 0 0 1.2rem;
+    padding: 0;
+}
+
+.hero-tags li {
+    background: #fff3e5;
+    border: 0.0625rem solid #f6d2ad;
+    border-radius: 999rem;
+    color: #9a3412;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0;
+}
+
+.hero-btn {
+    border-radius: 999rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+}
+
+.hero-btn--primary {
+    background: #9a3412;
+    color: #fff;
+}
+
+.hero-btn--primary:hover,
+.hero-btn--primary:focus-visible {
+    background: #7c2d12;
+}
+
+.hero-btn--ghost {
+    border: 0.0625rem solid #9a3412;
+    color: #9a3412;
+}
+
+.hero-btn--ghost:hover,
+.hero-btn--ghost:focus-visible {
+    background: #fff3e5;
 }
 
 
@@ -323,6 +484,42 @@ select {
 }
 
 @media (max-width: 40rem) {
+    .hero-section {
+        min-height: 23rem;
+        padding: 1rem 0;
+    }
+
+    .hero-content {
+        margin-inline: 0.8rem;
+        max-width: none;
+    }
+
+    .hero-actions {
+        gap: 0.45rem;
+    }
+
+    .hero-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-recetas {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .brand-recetas {
+        justify-content: center;
+    }
+
+    .brand-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .menu-recetas {
+        justify-content: center;
+    }
+
     .recipe-grid {
         grid-template-columns: 1fr;
     }
