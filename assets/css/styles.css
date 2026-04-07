@@ -462,6 +462,209 @@ select {
 }
 
 
+/* DETALLE DE RECETA */
+.detail-page {
+    background:
+        radial-gradient(circle at 90% 5%, rgba(252, 211, 77, 0.22), transparent 36%),
+        radial-gradient(circle at 8% 28%, rgba(249, 115, 22, 0.16), transparent 34%),
+        #fffdf8;
+    padding-bottom: 3.8rem;
+}
+
+.detail-page--pizza {
+    color: #1f2937;
+}
+
+.detail-hero {
+    align-items: center;
+    column-gap: 1.4rem;
+    display: grid;
+    grid-template-columns: 1.08fr 0.92fr;
+    padding-block: 2.2rem;
+}
+
+.detail-hero__content {
+    background: rgba(255, 255, 255, 0.92);
+    border: 0.0625rem solid rgba(180, 83, 9, 0.25);
+    border-radius: 1.25rem;
+    box-shadow: 0 1rem 2rem rgba(180, 83, 9, 0.08);
+    padding: 1.5rem;
+}
+
+.detail-kicker {
+    color: #b45309;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    margin-bottom: 0.55rem;
+    text-transform: uppercase;
+}
+
+.detail-hero__content h1 {
+    font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+    line-height: 1.08;
+    margin-bottom: 0.8rem;
+    text-wrap: balance;
+}
+
+.detail-lead {
+    color: #4b5563;
+    margin-bottom: 1rem;
+    max-width: 36rem;
+}
+
+.detail-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0 0 1.15rem;
+    padding: 0;
+}
+
+.detail-meta li {
+    background: #fff2df;
+    border: 0.0625rem solid rgba(180, 83, 9, 0.28);
+    border-radius: 999rem;
+    color: #9a3412;
+    font-size: 0.84rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+}
+
+.detail-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin: 0;
+}
+
+.detail-hero__media {
+    border-radius: 1.25rem;
+    overflow: clip;
+    box-shadow: 0 1.2rem 2.6rem rgba(15, 23, 42, 0.16);
+}
+
+.detail-hero__media img {
+    aspect-ratio: 16 / 12;
+    object-fit: cover;
+    width: 100%;
+}
+
+.detail-layout {
+    column-gap: 1.25rem;
+    display: grid;
+    grid-template-columns: minmax(16rem, 22rem) minmax(0, 1fr);
+}
+
+.detail-panel,
+.detail-content {
+    display: grid;
+    gap: 1.15rem;
+}
+
+.detail-card {
+    background: #ffffff;
+    border: 0.0625rem solid rgba(31, 41, 55, 0.1);
+    border-radius: 1.1rem;
+    box-shadow: 0 0.8rem 1.9rem rgba(31, 41, 55, 0.08);
+    padding: 1.2rem;
+}
+
+.detail-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+}
+
+.detail-list,
+.detail-tips {
+    display: grid;
+    gap: 0.55rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.detail-list li,
+.detail-tips li {
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.detail-list li::before,
+.detail-tips li::before {
+    color: #0f766e;
+    content: "●";
+    left: 0;
+    position: absolute;
+}
+
+.detail-facts {
+    display: grid;
+    gap: 0.6rem;
+    margin: 0;
+}
+
+.detail-facts div {
+    align-items: baseline;
+    border-bottom: 0.0625rem dashed rgba(31, 41, 55, 0.18);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.35rem;
+}
+
+.detail-facts dt {
+    color: #475569;
+    font-weight: 600;
+}
+
+.detail-facts dd {
+    color: #111827;
+    font-weight: 800;
+    margin: 0;
+}
+
+.detail-card--accent {
+    border-color: rgba(15, 118, 110, 0.32);
+    background: linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%);
+}
+
+.detail-steps {
+    counter-reset: step;
+    display: grid;
+    gap: 0.85rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.detail-steps li {
+    background: #fffbf5;
+    border: 0.0625rem solid rgba(180, 83, 9, 0.2);
+    border-radius: 0.85rem;
+    padding: 0.75rem 0.8rem 0.75rem 2.5rem;
+    position: relative;
+}
+
+.detail-steps li::before {
+    align-items: center;
+    background: #b45309;
+    border-radius: 999rem;
+    color: #fff;
+    content: counter(step);
+    counter-increment: step;
+    display: inline-flex;
+    font-size: 0.82rem;
+    font-weight: 700;
+    height: 1.4rem;
+    justify-content: center;
+    left: 0.7rem;
+    position: absolute;
+    top: 0.7rem;
+    width: 1.4rem;
+}
+
+
 /* FOOTER */
 .footer-recetas {
     background: #1f2937;
@@ -535,6 +738,15 @@ select {
 
 @media (max-width: 62rem) {
 
+    .detail-hero {
+        grid-template-columns: 1fr;
+        padding-top: 1.8rem;
+    }
+
+    .detail-layout {
+        grid-template-columns: 1fr;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -559,6 +771,16 @@ select {
 }
 
 @media (max-width: 40rem) {
+
+    .detail-hero__content,
+    .detail-card {
+        padding: 1rem;
+    }
+
+    .detail-actions .hero-btn {
+        width: 100%;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         padding-block: 1.7rem;

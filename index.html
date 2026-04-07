@@ -34,7 +34,7 @@
                 <li><a href="#categorias" class="menu-link">Categorías</a></li>
                 <li><a href="#recetas" class="menu-link">Recetas</a></li>
                 <li><a href="#contacto" class="menu-link">Contacto</a></li>
-                <li><a href="#categorias" class="menu-cta">Receta del día</a></li>
+                <li><a href="detalle-pizza.html" class="menu-cta">Receta del día</a></li>
             </ul>
         </nav>
         <section class="hero-section" aria-label="Presentación principal">
@@ -57,7 +57,7 @@
 
     <main class="main-content">
         <section id="categorias" class="recipe-category recipe-category--italiana">
-            <div class="category-heading container">
+            <div id="italia" class="category-heading container">
                 <p class="category-kicker">Selección 01</p>
                 <h2>Platos italianos reconfortantes</h2>
                 <p>Una grilla editorial con tamaños variables para destacar recetas con más presencia visual.</p>
@@ -75,7 +75,7 @@
                             <p class="recipe-tile__meta">Italiana · Fácil · 35 min</p>
                             <h3>Pizza Margarita clásica</h3>
                             <p>Salsa de tomate, mozzarella, albahaca fresca y un horneado rápido para una cena de siempre.</p>
-                            <a href="#" class="recipe-tile__link">Ver receta</a>
+                            <a href="detalle-pizza.html" class="recipe-tile__link">Ver receta</a>
                         </div>
                     </article>
                 </li>
@@ -116,7 +116,7 @@
         </section>
 
         <section id="recetas" class="recipe-category recipe-category--accent recipe-category--global">
-            <div class="category-heading container">
+            <div id="asia" class="category-heading container">
                 <p class="category-kicker">Selección 02</p>
                 <h2>Platos frescos y globales</h2>
                 <p>Otra composición irregular, con piezas altas y apaisadas para evitar la típica grilla repetitiva.</p>
@@ -138,7 +138,7 @@
                         </div>
                     </article>
                 </li>
-                <li class="recipe-grid__item">
+                <li id="mexicano" class="recipe-grid__item">
                     <article class="recipe-tile">
                         <img src="https://cdn.dummyjson.com/recipe-images/5.webp" alt="Pollo con salsa de mango">
                         <div class="recipe-tile__body">
@@ -149,7 +149,7 @@
                         </div>
                     </article>
                 </li>
-                <li class="recipe-grid__item recipe-grid__item--hero">
+                <li id="mediterraneo" class="recipe-grid__item recipe-grid__item--hero">
                     <article class="recipe-tile">
                         <img src="https://cdn.dummyjson.com/recipe-images/6.webp" alt="Ensalada de quinoa con palta">
                         <div class="recipe-tile__body">
@@ -160,7 +160,7 @@
                         </div>
                     </article>
                 </li>
-                <li class="recipe-grid__item recipe-grid__item--tall">
+                <li id="marroqui" class="recipe-grid__item recipe-grid__item--tall">
                     <article class="recipe-tile">
                         <img src="https://cdn.dummyjson.com/recipe-images/17.webp" alt="Tajín marroquí de garbanzos">
                         <div class="recipe-tile__body">
@@ -187,18 +187,17 @@
                 <ul class="footer-links" role="list">
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#categorias">Categorías</a></li>
-                    <li><a href="#recetas">Recetas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
 
             <div class="footer-block" aria-label="Tipos de recetas">
                 <h3>Categorías</h3>
                 <ul class="footer-links" role="list">
-                    <li><a href="#categorias">Italiana</a></li>
-                    <li><a href="#recetas">Asiática</a></li>
-                    <li><a href="#recetas">Mediterránea</a></li>
-                    <li><a href="#recetas">Mexicana</a></li>
+                    <li><a href="#italia">Italiana</a></li>
+                    <li><a href="#asia">Asiática</a></li>
+                    <li><a href="#mediterraneo">Mediterránea</a></li>
+                    <li><a href="#mexicano">Mexicana</a></li>
+                    <li><a href="#marroqui">Marroquí</a></li>
                 </ul>
             </div>
 
@@ -211,7 +210,7 @@
         </section>
 
         <section class="footer-bottom">
-            <p class="container">© 2026 Web de Recetas · Hecho para practicar UX/UI y maquetado semántico.</p>
+            <p class="container">© 2026 Web de Recetas · Luciano Neiman · Hecho para practicar UX/UI y maquetado semántico.</p>
         </section>
     </footer>
 </body>
